@@ -43,8 +43,8 @@ package 'libsqlite3-dev'
 
 application node.rails_install.app_name do
   path "/var/apps/#{node.rails_install.app_name}"
-  owner "root"
-  group "root"
+  owner node.apache.user
+  group node.apache.group
 
   repository node.rails_install.repository
   revision "master"
