@@ -45,6 +45,15 @@ package 'telnet'
 #   action :grant
 # end
 
+%w(database uploads).each do |shared_dir|
+  directory "/var/apps/#{node.rails_install.app_name}/shared/#{shared_dir}" do
+    recursive true
+    owner node.apache.user
+    group node.apache.group
+    mode 0770
+  end
+end
+
 application node.rails_install.app_name do
   path "/var/apps/#{node.rails_install.app_name}"
   owner node.apache.user
@@ -52,7 +61,7 @@ application node.rails_install.app_name do
 
   repository node.rails_install.repository
   revision "master"
-  symlinks "public/uploads" => "uploads", "database" => "database"
+  symlinks "uploads" => "public/uploads", "database" => "database"
 
   migrate true
 
