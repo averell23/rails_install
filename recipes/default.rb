@@ -68,6 +68,6 @@ web_app node.rails_install.app_name do
   docroot "/var/apps/#{node.rails_install.app_name}/current/public"
   cookbook "passenger_apache2"
   server_name node.rails_install.server_name
-  # server_aliases [ "something" ]
+  server_aliases [ ]
   rails_env "production"
 end
