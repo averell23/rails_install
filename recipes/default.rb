@@ -71,7 +71,7 @@ application node.rails_install.app_name do
     bundler true
     database(
       :adapter => 'sqlite3',
-      :database => 'db/production.sqlite3',
+      :database => 'database/production.sqlite3',
       :pool => 5,
       :timeout => 5000
     )
