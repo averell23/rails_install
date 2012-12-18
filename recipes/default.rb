@@ -52,7 +52,7 @@ application node.rails_install.app_name do
 
   repository node.rails_install.repository
   revision "master"
-  symlinks "uploads" => "uploads", "database" => "database"
+  symlinks "public/uploads" => "uploads", "database" => "database"
 
   migrate true
 
