@@ -24,8 +24,12 @@
 
 include_recipe "passenger_apache2::mod_rails"
 
+# Include some useful packages
 package 'sqlite3'
 package 'libsqlite3-dev'
+package 'imagemagick'
+package 'curl'
+package 'telnet'
 
 # mysql_database node.rails_install.app_name do
 #   connection({:host => "localhost", :username => 'root', :password => node['mysql']['server_root_password']})
