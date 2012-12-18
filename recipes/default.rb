@@ -62,7 +62,8 @@ application node.rails_install.app_name do
   repository node.rails_install.repository
   revision "master"
   create_dirs_before_symlink ['public', 'config']
-  symlinks "uploads" => "public/uploads", "database" => "database"
+  symlink_before_migrate "database" => "database"
+  symlinks "uploads" => "public/uploads"
 
   migrate true
 
