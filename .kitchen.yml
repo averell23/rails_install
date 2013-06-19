@@ -24,4 +24,10 @@ platforms:
 suites:
 - name: default
   run_list: ["recipe[rails_install]"]
-  attributes: {}
+  attributes: {
+    mysql: {
+      server_root_password: "fnordfnordfnordfnord",
+      server_debian_password: "fnordfnordfnordfnord",
+      server_repl_password: "fnordfnordfnordfnord"
+    }
+  }
