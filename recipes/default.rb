@@ -22,6 +22,8 @@
 #include_recipe "ruby_from_source"
 # include_recipe 'build-essential'
 
+include_recipe "git"
+include_recipe "apt"
 include_recipe "passenger_apache2::mod_rails"
 
 # Include some useful packages

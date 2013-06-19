@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+site 'http://community.opscode.com/api/v1'
+
+# Other cookbooks
+# https://github.com/joevandyk/chef-cookbooks
+# https://github.com/37signals/37s_cookbooks
+# https://github.com/cookbooks
+# https://github.com/engineyard/ey-cloud-recipes
+
+cookbook "git"
+cookbook "application_ruby"
+cookbook "application_nginx"
+cookbook "rails_install", :path => "."
+cookbook "ruby_from_source", :git => "https://github.com/better-cooking/ruby_from_source.git"
+cookbook "source_package", :git => "https://github.com/averell23/source_package.git"

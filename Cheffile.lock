@@ -1,0 +1,91 @@
+SITE
+  remote: http://community.opscode.com/api/v1
+  specs:
+    apache2 (1.6.6)
+    application (2.0.4)
+    application_nginx (1.1.0)
+      application (>= 0.0.0)
+      nginx (>= 0.0.0)
+    application_ruby (1.1.4)
+      apache2 (>= 0.0.0)
+      application (>= 0.0.0)
+      passenger_apache2 (>= 0.0.0)
+      runit (~> 1.0)
+      unicorn (>= 0.0.0)
+    apt (2.0.0)
+    aws (0.101.2)
+    build-essential (1.4.0)
+    chef_handler (1.1.4)
+    database (1.4.0)
+      aws (>= 0.0.0)
+      mysql (>= 1.3.0)
+      postgresql (>= 1.0.0)
+      xfs (>= 0.0.0)
+    dmg (1.1.0)
+    git (2.5.2)
+      build-essential (>= 0.0.0)
+      dmg (>= 0.0.0)
+      runit (>= 1.0)
+      windows (>= 0.0.0)
+      yum (>= 0.0.0)
+    mysql (3.0.2)
+      build-essential (> 1.1.0)
+      openssl (>= 0.0.0)
+    nginx (1.7.0)
+      apt (>= 0.0.0)
+      build-essential (>= 0.0.0)
+      ohai (>= 1.1.4)
+      runit (>= 0.0.0)
+      yum (>= 0.0.0)
+    ohai (1.1.10)
+    openssl (1.0.2)
+    passenger_apache2 (2.0.2)
+      apache2 (>= 1.0.4)
+      build-essential (>= 0.0.0)
+    postgresql (3.0.2)
+      apt (>= 0.0.0)
+      build-essential (>= 0.0.0)
+      openssl (>= 0.0.0)
+    runit (1.1.6)
+      build-essential (>= 0.0.0)
+      yum (>= 0.0.0)
+    unicorn (1.3.0)
+    windows (1.10.0)
+      chef_handler (>= 0.0.0)
+    xfs (1.1.0)
+    yum (2.3.0)
+
+GIT
+  remote: https://github.com/averell23/source_package.git
+  ref: master
+  sha: c38d53a9f412a3b77ff39bce7b39450245ead074
+  specs:
+    source_package (0.1.0)
+
+GIT
+  remote: https://github.com/better-cooking/ruby_from_source.git
+  ref: master
+  sha: dfb4c93146d3222c06358df0b991be3ec1dcb6b0
+  specs:
+    ruby_from_source (0.1.0)
+      source_package (>= 0.0.0)
+
+PATH
+  remote: .
+  specs:
+    rails_install (0.1.0)
+      application_nginx (>= 0.0.0)
+      application_ruby (>= 0.0.0)
+      build-essential (>= 0.0.0)
+      database (>= 0.0.0)
+      passenger_apache2 (>= 0.0.0)
+      ruby_from_source (>= 0.0.0)
+
+DEPENDENCIES
+  application_nginx (>= 0)
+  application_ruby (>= 0)
+  git (>= 0)
+  rails_install (>= 0)
+  ruby_from_source (>= 0)
+  source_package (>= 0)
+
